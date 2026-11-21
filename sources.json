@@ -1,0 +1,77 @@
+{
+  "tables": {
+    "lots": {
+      "key": [
+        "id"
+      ],
+      "columns": [
+        "id",
+        "period",
+        "feed",
+        "zone",
+        "item",
+        "start",
+        "due",
+        "state",
+        "terminal_at"
+      ]
+    },
+    "checks": {
+      "key": [
+        "lot",
+        "observed"
+      ],
+      "columns": [
+        "lot",
+        "observed",
+        "received",
+        "percent"
+      ]
+    },
+    "trucks": {
+      "key": [
+        "id"
+      ],
+      "columns": [
+        "id",
+        "period",
+        "carrier",
+        "lots",
+        "depart",
+        "latest",
+        "split",
+        "loaded",
+        "allowed_zones",
+        "required"
+      ]
+    },
+    "spares": {
+      "key": [
+        "id"
+      ],
+      "columns": [
+        "id",
+        "window_from",
+        "window_to",
+        "places",
+        "carriers",
+        "zone",
+        "held_for"
+      ]
+    }
+  },
+  "links": [
+    [
+      "checks",
+      "lot",
+      "lots",
+      "id"
+    ],
+    [
+      "spares",
+      "held_for",
+      "trucks",
+      "id"
+    ]
+  ]
+}

@@ -1,0 +1,4 @@
+id,window_from,window_to,places,carriers,zone,held_for
+Z01,24,56,2,"V1,V2",cold,
+Z02,42,55,1,V2,new,
+Z03,24,52,1,V1,cold,G05
