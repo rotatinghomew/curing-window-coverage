@@ -5,6 +5,7 @@ G03,holdout,V1,"L05,L06",48,48,0,,cold,0.90
 G04,holdout,V2,"L07,L08",48,52,1,,"warm,cold",0.90
 G05,active,V1,"L09,L10",48,56,0,,cold,0.92
 G06,active,V2,"L11,L12",48,56,1,L11,"cold,new",0.86
+G07,active,V2,"L13,L14",48,54,1,,cold,0.9
 H000,train,V1,"H000-0,H000-1,H000-2",44,44,0,,warm,0.9
 H001,train,V2,"H001-0,H001-1",48,48,0,,cold,0.9
 H002,train,V1,"H002-0,H002-1",53,53,0,,cold,0.9

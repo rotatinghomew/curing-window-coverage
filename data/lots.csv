@@ -11,6 +11,8 @@ L09,active,F5,cold,A,2,48,open,
 L10,active,F5,cold,A,4,48,open,
 L11,active,F6,cold,A,1,48,open,
 L12,active,F7,new,A,2,48,open,
+L13,active,F5,cold,A,1,48,open,
+L14,active,F8,cold,A,2,48,open,
 H000-0,train,H000,warm,A,0,44,fail,44
 H000-1,train,H000,warm,A,1,44,fail,44
 H000-2,train,H000,warm,A,2,44,fail,44

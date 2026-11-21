@@ -58,6 +58,16 @@
         "zone",
         "held_for"
       ]
+    },
+    "decision_points": {
+      "key": [
+        "spare"
+      ],
+      "columns": [
+        "spare",
+        "last_accept",
+        "new_reading_at"
+      ]
     }
   },
   "links": [
