@@ -1,0 +1,1201 @@
+{
+  "commitments": {
+    "2026-11-25:G05": {
+      "actions": [
+        {
+          "action_id": "spare:G05:L10:Z03",
+          "assigned_unit_id": "Z03#1",
+          "carrier": "V1",
+          "claim_key": "G05:L10:Z03",
+          "coverage_summary": "保留 Z03#1（Z03）在 24–52 小时、V1 / cold 温区的一个批次位置",
+          "coverage_window": [
+            24,
+            52
+          ],
+          "decision_deadline": 28,
+          "decision_type": "wait_for_named_reading_then_decide_by_deadline",
+          "exclusions": [
+            "不保证含水最终达标或客户一定按时收到",
+            "仅覆盖备用舱窗口 24–52；窗口外不覆盖",
+            "载具/温区不匹配、超过 last_accept、已装车后撤回均不覆盖",
+            "若触发读数在 last_accept 后才可见，不得作该项救济承诺"
+          ],
+          "immutable": false,
+          "kind": "spare_commitment",
+          "lot_conservative_low": 0.5216728676437127,
+          "lot_id": "L10",
+          "lot_meets_required": false,
+          "must_decide_by": 28,
+          "next_reading_at": 27,
+          "next_reading_visible_by_deadline": true,
+          "non_coverage": [
+            "不保证含水最终达标或客户一定按时收到",
+            "仅覆盖备用舱窗口 24–52；窗口外不覆盖",
+            "载具/温区不匹配、超过 last_accept、已装车后撤回均不覆盖",
+            "若触发读数在 last_accept 后才可见，不得作该项救济承诺"
+          ],
+          "occupancy_by_scenario": {
+            "feed:F5:bad": 1,
+            "zone:cold:bad": 1
+          },
+          "quantity": 1,
+          "reconciled_as_of": 29,
+          "reconciliation_note": "合并此前承诺；核心资源不变，只按当前时点和读数更新未履行状态",
+          "spare_id": "Z03",
+          "status": "activated",
+          "timing_note": "可等待 27 的读数，但必须在 28 前决定/接收",
+          "trigger_state": "coverage_active_quality_not_guaranteed",
+          "truck_id": "G05",
+          "zone": "cold"
+        },
+        {
+          "action_id": "spare:G05:L09:Z01",
+          "assigned_unit_id": "Z01#2",
+          "carrier": "V1",
+          "claim_key": "G05:L09:Z01",
+          "coverage_summary": "保留 Z01#2（Z01）在 24–56 小时、V1 / cold 温区的一个批次位置",
+          "coverage_window": [
+            24,
+            56
+          ],
+          "decision_deadline": 26,
+          "decision_type": "decide_on_visible_facts_before_deadline",
+          "exclusions": [
+            "不保证含水最终达标或客户一定按时收到",
+            "仅覆盖备用舱窗口 24–56；窗口外不覆盖",
+            "载具/温区不匹配、超过 last_accept、已装车后撤回均不覆盖",
+            "若触发读数在 last_accept 后才可见，不得作该项救济承诺"
+          ],
+          "immutable": false,
+          "kind": "spare_commitment",
+          "lot_conservative_low": 0.8987949425555034,
+          "lot_id": "L09",
+          "lot_meets_required": false,
+          "must_decide_by": 26,
+          "next_reading_at": 28,
+          "next_reading_visible_by_deadline": false,
+          "non_coverage": [
+            "不保证含水最终达标或客户一定按时收到",
+            "仅覆盖备用舱窗口 24–56；窗口外不覆盖",
+            "载具/温区不匹配、超过 last_accept、已装车后撤回均不覆盖",
+            "若触发读数在 last_accept 后才可见，不得作该项救济承诺"
+          ],
+          "occupancy_by_scenario": {
+            "feed:F5:bad": 1,
+            "zone:cold:bad": 1
+          },
+          "quantity": 1,
+          "reconciled_as_of": 29,
+          "reconciliation_note": "合并此前承诺；核心资源不变，只按当前时点和读数更新未履行状态",
+          "spare_id": "Z01",
+          "status": "activated",
+          "timing_note": "下一次读数 28 晚于最迟接收 26；必须在 26 前按已送达读数决定，不能承诺等新读数后的救济",
+          "trigger_state": "coverage_active_quality_not_guaranteed",
+          "truck_id": "G05",
+          "zone": "cold"
+        }
+      ],
+      "as_of": 29,
+      "capacity_check": {
+        "active_claim_count": 4,
+        "interpretation": "同一具名坏情景的占用相加；互斥情景分别记账，因此不会被错误地当作永久双倍占用",
+        "max_scenario_occupancy_by_spare": {
+          "Z01": 2,
+          "Z02": 1,
+          "Z03": 1
+        },
+        "scenario_ledger": {
+          "Z01:feed:F5:bad": 2,
+          "Z01:zone:cold:bad": 2,
+          "Z02:feed:F7:bad": 1,
+          "Z02:zone:new:bad": 1,
+          "Z03:feed:F5:bad": 1,
+          "Z03:zone:cold:bad": 1
+        },
+        "source_holds": {
+          "Z03": [
+            {
+              "occupancy_by_scenario": {
+                "*": 1
+              },
+              "source": "spares.held_for",
+              "truck_id": "G05",
+              "unit_id": "Z03#1"
+            }
+          ]
+        }
+      },
+      "created_at": "2026-11-25T04:02:27.614643+00:00",
+      "exceptions": [
+        {
+          "all_matches": [
+            {
+              "decision_deadline": 26,
+              "eligible": false,
+              "future_condition_promisable": false,
+              "held_for": null,
+              "next_reading_at": 28,
+              "next_reading_visible_by_deadline": false,
+              "places": 2,
+              "reasons": [
+                "last_accept_deadline_passed_without_prior_commitment"
+              ],
+              "spare_id": "Z01",
+              "window": [
+                24,
+                56
+              ]
+            },
+            {
+              "decision_deadline": 45,
+              "eligible": false,
+              "future_condition_promisable": true,
+              "held_for": null,
+              "next_reading_at": 43,
+              "next_reading_visible_by_deadline": true,
+              "places": 1,
+              "reasons": [
+                "carrier_not_allowed",
+                "zone_not_allowed"
+              ],
+              "spare_id": "Z02",
+              "window": [
+                42,
+                55
+              ]
+            },
+            {
+              "decision_deadline": 28,
+              "eligible": false,
+              "future_condition_promisable": true,
+              "held_for": "G05",
+              "next_reading_at": 27,
+              "next_reading_visible_by_deadline": true,
+              "places": 1,
+              "reasons": [
+                "last_accept_deadline_passed_without_prior_commitment"
+              ],
+              "spare_id": "Z03",
+              "window": [
+                24,
+                52
+              ]
+            }
+          ],
+          "kind": "no_eligible_spare_or_deadline_passed",
+          "lot_id": "L09",
+          "truck_id": "G05"
+        },
+        {
+          "all_matches": [
+            {
+              "decision_deadline": 26,
+              "eligible": false,
+              "future_condition_promisable": false,
+              "held_for": null,
+              "next_reading_at": 28,
+              "next_reading_visible_by_deadline": false,
+              "places": 2,
+              "reasons": [
+                "last_accept_deadline_passed_without_prior_commitment"
+              ],
+              "spare_id": "Z01",
+              "window": [
+                24,
+                56
+              ]
+            },
+            {
+              "decision_deadline": 45,
+              "eligible": false,
+              "future_condition_promisable": true,
+              "held_for": null,
+              "next_reading_at": 43,
+              "next_reading_visible_by_deadline": true,
+              "places": 1,
+              "reasons": [
+                "carrier_not_allowed",
+                "zone_not_allowed"
+              ],
+              "spare_id": "Z02",
+              "window": [
+                42,
+                55
+              ]
+            },
+            {
+              "decision_deadline": 28,
+              "eligible": false,
+              "future_condition_promisable": true,
+              "held_for": "G05",
+              "next_reading_at": 27,
+              "next_reading_visible_by_deadline": true,
+              "places": 1,
+              "reasons": [
+                "last_accept_deadline_passed_without_prior_commitment"
+              ],
+              "spare_id": "Z03",
+              "window": [
+                24,
+                52
+              ]
+            }
+          ],
+          "kind": "no_eligible_spare_or_deadline_passed",
+          "lot_id": "L10",
+          "truck_id": "G05"
+        }
+      ],
+      "full_group": {
+        "conservative_lower": 0.4204678101992161,
+        "frechet_bounds": [
+          0.7246800188231779,
+          0.7677475033801566
+        ],
+        "independence_product": 0.7346825496346728,
+        "meets_required_conservatively": false
+      },
+      "key": "2026-11-25:G05",
+      "loaded_ids": [],
+      "marginals": [
+        {
+          "conservative_low": 0.898795,
+          "latest_visible": {
+            "as_of": 29,
+            "observed": 24,
+            "percent": 8.9,
+            "previous_percent": 12.2,
+            "received": 27
+          },
+          "lot": "L09",
+          "probability": 0.956933,
+          "state_at_as_of": "open"
+        },
+        {
+          "conservative_low": 0.521673,
+          "latest_visible": {
+            "as_of": 29,
+            "observed": 24,
+            "percent": 11.0,
+            "previous_percent": 11.2,
+            "received": 24
+          },
+          "lot": "L10",
+          "probability": 0.767748,
+          "state_at_as_of": "open"
+        }
+      ],
+      "recommended_ship_lot_ids": [],
+      "reconciliation": [
+        {
+          "explanation": "L09 的可见读数已更新；只允许修改尚未履行/未装车的动作。",
+          "lot_id": "L09",
+          "new_latest_visible": {
+            "as_of": 29,
+            "observed": 24,
+            "percent": 8.9,
+            "previous_percent": 12.2,
+            "received": 27
+          },
+          "new_reference_probability": 0.9569325154430214,
+          "old_latest_visible": {
+            "as_of": 25,
+            "observed": 12,
+            "percent": 12.2,
+            "previous_percent": null,
+            "received": 12
+          },
+          "old_reference_probability": 0.955752
+        }
+      ],
+      "required_probability": 0.92,
+      "revision": 2,
+      "ship_date": "2026-11-25",
+      "status": "confirmed_with_exceptions",
+      "submission_count": 2,
+      "truck_id": "G05",
+      "updated_at": "2026-11-25T04:02:28.342700+00:00",
+      "why_not_independence": "Fréchet 下界不需要独立、同相关或 copula 假设；乘积只在所有特有波动独立时成立"
+    },
+    "2026-11-25:G06": {
+      "actions": [
+        {
+          "action_id": "ship:G06:L11",
+          "assessment_as_of": 29,
+          "coverage": "已装车段不可撤回；其他部分按合同允许的拆分发运，且只包含保守下界达到 required 的部分",
+          "immutable": true,
+          "kind": "ship_commitment",
+          "lot_id": "L11",
+          "qualification_exception": false,
+          "ship_lot_ids": [
+            "L11"
+          ],
+          "status": "confirmed",
+          "truck_id": "G06"
+        },
+        {
+          "action_id": "spare:G06:L12:Z02",
+          "assigned_unit_id": "Z02#1",
+          "carrier": "V2",
+          "claim_key": "G06:L12:Z02",
+          "coverage_summary": "保留 Z02#1（Z02）在 42–55 小时、V2 / new 温区的一个批次位置",
+          "coverage_window": [
+            42,
+            55
+          ],
+          "decision_deadline": 45,
+          "decision_type": "wait_for_named_reading_then_decide_by_deadline",
+          "exclusions": [
+            "不保证含水最终达标或客户一定按时收到",
+            "仅覆盖备用舱窗口 42–55；窗口外不覆盖",
+            "载具/温区不匹配、超过 last_accept、已装车后撤回均不覆盖",
+            "若触发读数在 last_accept 后才可见，不得作该项救济承诺"
+          ],
+          "immutable": false,
+          "kind": "spare_commitment",
+          "lot_conservative_low": 0.025000000000000022,
+          "lot_id": "L12",
+          "lot_meets_required": false,
+          "must_decide_by": 45,
+          "next_reading_at": 43,
+          "next_reading_visible_by_deadline": true,
+          "non_coverage": [
+            "不保证含水最终达标或客户一定按时收到",
+            "仅覆盖备用舱窗口 42–55；窗口外不覆盖",
+            "载具/温区不匹配、超过 last_accept、已装车后撤回均不覆盖",
+            "若触发读数在 last_accept 后才可见，不得作该项救济承诺"
+          ],
+          "occupancy_by_scenario": {
+            "feed:F7:bad": 1,
+            "zone:new:bad": 1
+          },
+          "quantity": 1,
+          "reconciled_as_of": 29,
+          "spare_id": "Z02",
+          "status": "conditional_reserved",
+          "timing_note": "可等待 43 的读数，但必须在 45 前决定/接收",
+          "trigger_state": "waiting_for_named_reading",
+          "truck_id": "G06",
+          "zone": "new"
+        }
+      ],
+      "as_of": 29,
+      "capacity_check": {
+        "active_claim_count": 4,
+        "interpretation": "同一具名坏情景的占用相加；互斥情景分别记账，因此不会被错误地当作永久双倍占用",
+        "max_scenario_occupancy_by_spare": {
+          "Z01": 2,
+          "Z02": 1,
+          "Z03": 1
+        },
+        "scenario_ledger": {
+          "Z01:feed:F5:bad": 2,
+          "Z01:zone:cold:bad": 2,
+          "Z02:feed:F7:bad": 1,
+          "Z02:zone:new:bad": 1,
+          "Z03:feed:F5:bad": 1,
+          "Z03:zone:cold:bad": 1
+        },
+        "source_holds": {
+          "Z03": [
+            {
+              "occupancy_by_scenario": {
+                "*": 1
+              },
+              "source": "spares.held_for",
+              "truck_id": "G05",
+              "unit_id": "Z03#1"
+            }
+          ]
+        }
+      },
+      "created_at": "2026-11-25T04:02:27.677894+00:00",
+      "exceptions": [],
+      "full_group": {
+        "conservative_lower": 0.0,
+        "frechet_bounds": [
+          0.7956821190558996,
+          0.8066532851899212
+        ],
+        "independence_product": 0.7978033579855482,
+        "meets_required_conservatively": false
+      },
+      "key": "2026-11-25:G06",
+      "loaded_ids": [
+        "L11"
+      ],
+      "marginals": [
+        {
+          "conservative_low": 0.966656,
+          "latest_visible": {
+            "as_of": 29,
+            "observed": 24,
+            "percent": 7.6,
+            "previous_percent": 10.1,
+            "received": 24
+          },
+          "lot": "L11",
+          "probability": 0.989029,
+          "state_at_as_of": "open"
+        },
+        {
+          "conservative_low": 0.025,
+          "latest_visible": {
+            "as_of": 29,
+            "observed": 24,
+            "percent": 10.9,
+            "previous_percent": 9.5,
+            "received": 29
+          },
+          "lot": "L12",
+          "probability": 0.806653,
+          "state_at_as_of": "open"
+        }
+      ],
+      "recommended_ship_lot_ids": [
+        "L11"
+      ],
+      "reconciliation": [
+        {
+          "classification_change": "12h/9.5 曾使跨区 logistic 参考值看起来很高；29 才收到的 24h/10.9 反弹且 new 温区无历史支撑，因此当前不能作无条件发运承诺。Z02 仍是在45前可凭43读数决定的或有抢救位置，但给舱不等于达标保证。",
+          "explanation": "L12 的可见读数已更新；只允许修改尚未履行/未装车的动作。",
+          "lot_id": "L12",
+          "new_latest_visible": {
+            "as_of": 29,
+            "observed": 24,
+            "percent": 10.9,
+            "previous_percent": 9.5,
+            "received": 29
+          },
+          "new_reference_probability": 0.8066532851899212,
+          "old_latest_visible": {
+            "as_of": 25,
+            "observed": 12,
+            "percent": 9.5,
+            "previous_percent": null,
+            "received": 12
+          },
+          "old_reference_probability": 0.997118
+        }
+      ],
+      "required_probability": 0.86,
+      "revision": 2,
+      "ship_date": "2026-11-25",
+      "status": "confirmed",
+      "submission_count": 2,
+      "truck_id": "G06",
+      "updated_at": "2026-11-25T04:02:28.406210+00:00",
+      "why_not_independence": "Fréchet 下界不需要独立、同相关或 copula 假设；乘积只在所有特有波动独立时成立"
+    },
+    "2026-11-25:G07": {
+      "actions": [
+        {
+          "action_id": "ship:G07:L14",
+          "assessment_as_of": 29,
+          "coverage": "已装车段不可撤回；其他部分按合同允许的拆分发运，且只包含保守下界达到 required 的部分",
+          "immutable": false,
+          "kind": "ship_commitment",
+          "lot_id": "L14",
+          "qualification_exception": false,
+          "ship_lot_ids": [
+            "L14"
+          ],
+          "status": "confirmed",
+          "truck_id": "G07"
+        },
+        {
+          "action_id": "spare:G07:L13:Z01",
+          "assigned_unit_id": "Z01#1",
+          "carrier": "V2",
+          "claim_key": "G07:L13:Z01",
+          "coverage_summary": "保留 Z01#1（Z01）在 24–56 小时、V2 / cold 温区的一个批次位置",
+          "coverage_window": [
+            24,
+            56
+          ],
+          "decision_deadline": 26,
+          "decision_type": "decide_on_visible_facts_before_deadline",
+          "exclusions": [
+            "不保证含水最终达标或客户一定按时收到",
+            "仅覆盖备用舱窗口 24–56；窗口外不覆盖",
+            "载具/温区不匹配、超过 last_accept、已装车后撤回均不覆盖",
+            "若触发读数在 last_accept 后才可见，不得作该项救济承诺"
+          ],
+          "immutable": false,
+          "kind": "spare_commitment",
+          "lot_conservative_low": 0.7741759807659929,
+          "lot_id": "L13",
+          "lot_meets_required": false,
+          "must_decide_by": 26,
+          "next_reading_at": 28,
+          "next_reading_visible_by_deadline": false,
+          "non_coverage": [
+            "不保证含水最终达标或客户一定按时收到",
+            "仅覆盖备用舱窗口 24–56；窗口外不覆盖",
+            "载具/温区不匹配、超过 last_accept、已装车后撤回均不覆盖",
+            "若触发读数在 last_accept 后才可见，不得作该项救济承诺"
+          ],
+          "occupancy_by_scenario": {
+            "feed:F5:bad": 1,
+            "zone:cold:bad": 1
+          },
+          "quantity": 1,
+          "reconciled_as_of": 29,
+          "reconciliation_note": "合并此前承诺；核心资源不变，只按当前时点和读数更新未履行状态",
+          "spare_id": "Z01",
+          "status": "activated",
+          "timing_note": "下一次读数 28 晚于最迟接收 26；必须在 26 前按已送达读数决定，不能承诺等新读数后的救济",
+          "trigger_state": "coverage_active_quality_not_guaranteed",
+          "truck_id": "G07",
+          "zone": "cold"
+        }
+      ],
+      "as_of": 29,
+      "capacity_check": {
+        "active_claim_count": 4,
+        "interpretation": "同一具名坏情景的占用相加；互斥情景分别记账，因此不会被错误地当作永久双倍占用",
+        "max_scenario_occupancy_by_spare": {
+          "Z01": 2,
+          "Z02": 1,
+          "Z03": 1
+        },
+        "scenario_ledger": {
+          "Z01:feed:F5:bad": 2,
+          "Z01:zone:cold:bad": 2,
+          "Z02:feed:F7:bad": 1,
+          "Z02:zone:new:bad": 1,
+          "Z03:feed:F5:bad": 1,
+          "Z03:zone:cold:bad": 1
+        },
+        "source_holds": {
+          "Z03": [
+            {
+              "occupancy_by_scenario": {
+                "*": 1
+              },
+              "source": "spares.held_for",
+              "truck_id": "G05",
+              "unit_id": "Z03#1"
+            }
+          ]
+        }
+      },
+      "created_at": "2026-11-25T04:02:27.740562+00:00",
+      "exceptions": [
+        {
+          "all_matches": [
+            {
+              "decision_deadline": 26,
+              "eligible": false,
+              "future_condition_promisable": false,
+              "held_for": null,
+              "next_reading_at": 28,
+              "next_reading_visible_by_deadline": false,
+              "places": 2,
+              "reasons": [
+                "last_accept_deadline_passed_without_prior_commitment"
+              ],
+              "spare_id": "Z01",
+              "window": [
+                24,
+                56
+              ]
+            },
+            {
+              "decision_deadline": 45,
+              "eligible": false,
+              "future_condition_promisable": true,
+              "held_for": null,
+              "next_reading_at": 43,
+              "next_reading_visible_by_deadline": true,
+              "places": 1,
+              "reasons": [
+                "zone_not_allowed"
+              ],
+              "spare_id": "Z02",
+              "window": [
+                42,
+                55
+              ]
+            },
+            {
+              "decision_deadline": 28,
+              "eligible": false,
+              "future_condition_promisable": true,
+              "held_for": "G05",
+              "next_reading_at": 27,
+              "next_reading_visible_by_deadline": true,
+              "places": 1,
+              "reasons": [
+                "carrier_not_allowed",
+                "spare_already_held_for_G05",
+                "last_accept_deadline_passed_without_prior_commitment"
+              ],
+              "spare_id": "Z03",
+              "window": [
+                24,
+                52
+              ]
+            }
+          ],
+          "kind": "no_eligible_spare_or_deadline_passed",
+          "lot_id": "L13",
+          "truck_id": "G07"
+        }
+      ],
+      "full_group": {
+        "conservative_lower": 0.73255827782071,
+        "frechet_bounds": [
+          0.8578536953201112,
+          0.8718028228153543
+        ],
+        "independence_product": 0.8596419340891901,
+        "meets_required_conservatively": false
+      },
+      "key": "2026-11-25:G07",
+      "loaded_ids": [],
+      "marginals": [
+        {
+          "conservative_low": 0.774176,
+          "latest_visible": {
+            "as_of": 29,
+            "observed": 24,
+            "percent": 10.1,
+            "previous_percent": 12.8,
+            "received": 24
+          },
+          "lot": "L13",
+          "probability": 0.871803,
+          "state_at_as_of": "open"
+        },
+        {
+          "conservative_low": 0.958382,
+          "latest_visible": {
+            "as_of": 29,
+            "observed": 24,
+            "percent": 7.9,
+            "previous_percent": 9.6,
+            "received": 27
+          },
+          "lot": "L14",
+          "probability": 0.986051,
+          "state_at_as_of": "open"
+        }
+      ],
+      "recommended_ship_lot_ids": [
+        "L14"
+      ],
+      "reconciliation": [
+        {
+          "explanation": "L14 的可见读数已更新；只允许修改尚未履行/未装车的动作。",
+          "lot_id": "L14",
+          "new_latest_visible": {
+            "as_of": 29,
+            "observed": 24,
+            "percent": 7.9,
+            "previous_percent": 9.6,
+            "received": 27
+          },
+          "new_reference_probability": 0.986050872504757,
+          "old_latest_visible": {
+            "as_of": 25,
+            "observed": 12,
+            "percent": 9.6,
+            "previous_percent": null,
+            "received": 14
+          },
+          "old_reference_probability": 0.996807
+        }
+      ],
+      "required_probability": 0.9,
+      "revision": 2,
+      "ship_date": "2026-11-25",
+      "status": "confirmed_with_exceptions",
+      "submission_count": 2,
+      "truck_id": "G07",
+      "updated_at": "2026-11-25T04:02:28.469671+00:00",
+      "why_not_independence": "Fréchet 下界不需要独立、同相关或 copula 假设；乘积只在所有特有波动独立时成立"
+    }
+  },
+  "history": [
+    {
+      "key": "2026-11-25:G05",
+      "record": {
+        "actions": [
+          {
+            "action_id": "spare:G05:L10:Z03",
+            "assigned_unit_id": "Z03#1",
+            "carrier": "V1",
+            "claim_key": "G05:L10:Z03",
+            "coverage_summary": "保留 Z03#1（Z03）在 24–52 小时、V1 / cold 温区的一个批次位置",
+            "coverage_window": [
+              24,
+              52
+            ],
+            "decision_deadline": 28,
+            "decision_type": "wait_for_named_reading_then_decide_by_deadline",
+            "exclusions": [
+              "不保证含水最终达标或客户一定按时收到",
+              "仅覆盖备用舱窗口 24–52；窗口外不覆盖",
+              "载具/温区不匹配、超过 last_accept、已装车后撤回均不覆盖",
+              "若触发读数在 last_accept 后才可见，不得作该项救济承诺"
+            ],
+            "immutable": false,
+            "kind": "spare_commitment",
+            "lot_conservative_low": 0.5216728676437127,
+            "lot_id": "L10",
+            "lot_meets_required": false,
+            "must_decide_by": 28,
+            "next_reading_at": 27,
+            "next_reading_visible_by_deadline": true,
+            "non_coverage": [
+              "不保证含水最终达标或客户一定按时收到",
+              "仅覆盖备用舱窗口 24–52；窗口外不覆盖",
+              "载具/温区不匹配、超过 last_accept、已装车后撤回均不覆盖",
+              "若触发读数在 last_accept 后才可见，不得作该项救济承诺"
+            ],
+            "occupancy_by_scenario": {
+              "feed:F5:bad": 1,
+              "zone:cold:bad": 1
+            },
+            "quantity": 1,
+            "reconciled_as_of": 25,
+            "spare_id": "Z03",
+            "status": "conditional_reserved",
+            "timing_note": "可等待 27 的读数，但必须在 28 前决定/接收",
+            "trigger_state": "waiting_for_named_reading",
+            "truck_id": "G05",
+            "zone": "cold"
+          },
+          {
+            "action_id": "spare:G05:L09:Z01",
+            "assigned_unit_id": "Z01#2",
+            "carrier": "V1",
+            "claim_key": "G05:L09:Z01",
+            "coverage_summary": "保留 Z01#2（Z01）在 24–56 小时、V1 / cold 温区的一个批次位置",
+            "coverage_window": [
+              24,
+              56
+            ],
+            "decision_deadline": 26,
+            "decision_type": "decide_on_visible_facts_before_deadline",
+            "exclusions": [
+              "不保证含水最终达标或客户一定按时收到",
+              "仅覆盖备用舱窗口 24–56；窗口外不覆盖",
+              "载具/温区不匹配、超过 last_accept、已装车后撤回均不覆盖",
+              "若触发读数在 last_accept 后才可见，不得作该项救济承诺"
+            ],
+            "immutable": false,
+            "kind": "spare_commitment",
+            "lot_conservative_low": 0.8926966037365277,
+            "lot_id": "L09",
+            "lot_meets_required": false,
+            "must_decide_by": 26,
+            "next_reading_at": 28,
+            "next_reading_visible_by_deadline": false,
+            "non_coverage": [
+              "不保证含水最终达标或客户一定按时收到",
+              "仅覆盖备用舱窗口 24–56；窗口外不覆盖",
+              "载具/温区不匹配、超过 last_accept、已装车后撤回均不覆盖",
+              "若触发读数在 last_accept 后才可见，不得作该项救济承诺"
+            ],
+            "occupancy_by_scenario": {
+              "feed:F5:bad": 1,
+              "zone:cold:bad": 1
+            },
+            "quantity": 1,
+            "reconciled_as_of": 25,
+            "spare_id": "Z01",
+            "status": "reserved",
+            "timing_note": "下一次读数 28 晚于最迟接收 26；必须在 26 前按已送达读数决定，不能承诺等新读数后的救济",
+            "trigger_state": "waiting_for_named_reading",
+            "truck_id": "G05",
+            "zone": "cold"
+          }
+        ],
+        "as_of": 25,
+        "capacity_check": {
+          "active_claim_count": 2,
+          "interpretation": "同一具名坏情景的占用相加；互斥情景分别记账，因此不会被错误地当作永久双倍占用",
+          "max_scenario_occupancy_by_spare": {
+            "Z01": 1,
+            "Z03": 1
+          },
+          "scenario_ledger": {
+            "Z01:feed:F5:bad": 1,
+            "Z01:zone:cold:bad": 1,
+            "Z03:feed:F5:bad": 1,
+            "Z03:zone:cold:bad": 1
+          },
+          "source_holds": {
+            "Z03": [
+              {
+                "occupancy_by_scenario": {
+                  "*": 1
+                },
+                "source": "spares.held_for",
+                "truck_id": "G05",
+                "unit_id": "Z03#1"
+              }
+            ]
+          }
+        },
+        "created_at": "2026-11-25T04:02:27.614643+00:00",
+        "exceptions": [],
+        "full_group": {
+          "conservative_lower": 0.4143694713802404,
+          "frechet_bounds": [
+            0.7234998011043534,
+            0.7677475033801566
+          ],
+          "independence_product": 0.7337764404276002,
+          "meets_required_conservatively": false
+        },
+        "key": "2026-11-25:G05",
+        "loaded_ids": [],
+        "marginals": [
+          {
+            "conservative_low": 0.892697,
+            "latest_visible": {
+              "as_of": 25,
+              "observed": 12,
+              "percent": 12.2,
+              "previous_percent": null,
+              "received": 12
+            },
+            "lot": "L09",
+            "probability": 0.955752,
+            "state_at_as_of": "open"
+          },
+          {
+            "conservative_low": 0.521673,
+            "latest_visible": {
+              "as_of": 25,
+              "observed": 24,
+              "percent": 11.0,
+              "previous_percent": 11.2,
+              "received": 24
+            },
+            "lot": "L10",
+            "probability": 0.767748,
+            "state_at_as_of": "open"
+          }
+        ],
+        "recommended_ship_lot_ids": [],
+        "reconciliation": [],
+        "required_probability": 0.92,
+        "revision": 1,
+        "ship_date": "2026-11-25",
+        "status": "confirmed_with_exceptions",
+        "submission_count": 1,
+        "truck_id": "G05",
+        "updated_at": "2026-11-25T04:02:27.614643+00:00",
+        "why_not_independence": "Fréchet 下界不需要独立、同相关或 copula 假设；乘积只在所有特有波动独立时成立"
+      },
+      "replaced_at": "2026-11-25T04:02:28.342700+00:00"
+    },
+    {
+      "key": "2026-11-25:G06",
+      "record": {
+        "actions": [
+          {
+            "action_id": "ship:G06:L11",
+            "assessment_as_of": 25,
+            "coverage": "已装车段不可撤回；其他部分按合同允许的拆分发运，且只包含保守下界达到 required 的部分",
+            "immutable": true,
+            "kind": "ship_commitment",
+            "lot_id": "L11",
+            "qualification_exception": false,
+            "ship_lot_ids": [
+              "L11"
+            ],
+            "status": "confirmed",
+            "truck_id": "G06"
+          },
+          {
+            "action_id": "spare:G06:L12:Z02",
+            "assigned_unit_id": "Z02#1",
+            "carrier": "V2",
+            "claim_key": "G06:L12:Z02",
+            "coverage_summary": "保留 Z02#1（Z02）在 42–55 小时、V2 / new 温区的一个批次位置",
+            "coverage_window": [
+              42,
+              55
+            ],
+            "decision_deadline": 45,
+            "decision_type": "wait_for_named_reading_then_decide_by_deadline",
+            "exclusions": [
+              "不保证含水最终达标或客户一定按时收到",
+              "仅覆盖备用舱窗口 42–55；窗口外不覆盖",
+              "载具/温区不匹配、超过 last_accept、已装车后撤回均不覆盖",
+              "若触发读数在 last_accept 后才可见，不得作该项救济承诺"
+            ],
+            "immutable": false,
+            "kind": "spare_commitment",
+            "lot_conservative_low": 0.025000000000000022,
+            "lot_id": "L12",
+            "lot_meets_required": false,
+            "must_decide_by": 45,
+            "next_reading_at": 43,
+            "next_reading_visible_by_deadline": true,
+            "non_coverage": [
+              "不保证含水最终达标或客户一定按时收到",
+              "仅覆盖备用舱窗口 42–55；窗口外不覆盖",
+              "载具/温区不匹配、超过 last_accept、已装车后撤回均不覆盖",
+              "若触发读数在 last_accept 后才可见，不得作该项救济承诺"
+            ],
+            "occupancy_by_scenario": {
+              "feed:F7:bad": 1,
+              "zone:new:bad": 1
+            },
+            "quantity": 1,
+            "reconciled_as_of": 25,
+            "spare_id": "Z02",
+            "status": "conditional_reserved",
+            "timing_note": "可等待 43 的读数，但必须在 45 前决定/接收",
+            "trigger_state": "waiting_for_named_reading",
+            "truck_id": "G06",
+            "zone": "new"
+          }
+        ],
+        "as_of": 25,
+        "capacity_check": {
+          "active_claim_count": 3,
+          "interpretation": "同一具名坏情景的占用相加；互斥情景分别记账，因此不会被错误地当作永久双倍占用",
+          "max_scenario_occupancy_by_spare": {
+            "Z01": 1,
+            "Z02": 1,
+            "Z03": 1
+          },
+          "scenario_ledger": {
+            "Z01:feed:F5:bad": 1,
+            "Z01:zone:cold:bad": 1,
+            "Z02:feed:F7:bad": 1,
+            "Z02:zone:new:bad": 1,
+            "Z03:feed:F5:bad": 1,
+            "Z03:zone:cold:bad": 1
+          },
+          "source_holds": {
+            "Z03": [
+              {
+                "occupancy_by_scenario": {
+                  "*": 1
+                },
+                "source": "spares.held_for",
+                "truck_id": "G05",
+                "unit_id": "Z03#1"
+              }
+            ]
+          }
+        },
+        "created_at": "2026-11-25T04:02:27.677894+00:00",
+        "exceptions": [],
+        "full_group": {
+          "conservative_lower": 0.0,
+          "frechet_bounds": [
+            0.9861467491877964,
+            0.9890288338659784
+          ],
+          "independence_product": 0.986178369017613,
+          "meets_required_conservatively": false
+        },
+        "key": "2026-11-25:G06",
+        "loaded_ids": [
+          "L11"
+        ],
+        "marginals": [
+          {
+            "conservative_low": 0.966656,
+            "latest_visible": {
+              "as_of": 25,
+              "observed": 24,
+              "percent": 7.6,
+              "previous_percent": 10.1,
+              "received": 24
+            },
+            "lot": "L11",
+            "probability": 0.989029,
+            "state_at_as_of": "open"
+          },
+          {
+            "conservative_low": 0.025,
+            "latest_visible": {
+              "as_of": 25,
+              "observed": 12,
+              "percent": 9.5,
+              "previous_percent": null,
+              "received": 12
+            },
+            "lot": "L12",
+            "probability": 0.997118,
+            "state_at_as_of": "open"
+          }
+        ],
+        "recommended_ship_lot_ids": [
+          "L11"
+        ],
+        "reconciliation": [],
+        "required_probability": 0.86,
+        "revision": 1,
+        "ship_date": "2026-11-25",
+        "status": "confirmed",
+        "submission_count": 1,
+        "truck_id": "G06",
+        "updated_at": "2026-11-25T04:02:27.677894+00:00",
+        "why_not_independence": "Fréchet 下界不需要独立、同相关或 copula 假设；乘积只在所有特有波动独立时成立"
+      },
+      "replaced_at": "2026-11-25T04:02:28.406210+00:00"
+    },
+    {
+      "key": "2026-11-25:G07",
+      "record": {
+        "actions": [
+          {
+            "action_id": "ship:G07:L14",
+            "assessment_as_of": 25,
+            "coverage": "已装车段不可撤回；其他部分按合同允许的拆分发运，且只包含保守下界达到 required 的部分",
+            "immutable": false,
+            "kind": "ship_commitment",
+            "lot_id": "L14",
+            "qualification_exception": false,
+            "ship_lot_ids": [
+              "L14"
+            ],
+            "status": "confirmed",
+            "truck_id": "G07"
+          },
+          {
+            "action_id": "spare:G07:L13:Z01",
+            "assigned_unit_id": "Z01#1",
+            "carrier": "V2",
+            "claim_key": "G07:L13:Z01",
+            "coverage_summary": "保留 Z01#1（Z01）在 24–56 小时、V2 / cold 温区的一个批次位置",
+            "coverage_window": [
+              24,
+              56
+            ],
+            "decision_deadline": 26,
+            "decision_type": "decide_on_visible_facts_before_deadline",
+            "exclusions": [
+              "不保证含水最终达标或客户一定按时收到",
+              "仅覆盖备用舱窗口 24–56；窗口外不覆盖",
+              "载具/温区不匹配、超过 last_accept、已装车后撤回均不覆盖",
+              "若触发读数在 last_accept 后才可见，不得作该项救济承诺"
+            ],
+            "immutable": false,
+            "kind": "spare_commitment",
+            "lot_conservative_low": 0.7741759807659929,
+            "lot_id": "L13",
+            "lot_meets_required": false,
+            "must_decide_by": 26,
+            "next_reading_at": 28,
+            "next_reading_visible_by_deadline": false,
+            "non_coverage": [
+              "不保证含水最终达标或客户一定按时收到",
+              "仅覆盖备用舱窗口 24–56；窗口外不覆盖",
+              "载具/温区不匹配、超过 last_accept、已装车后撤回均不覆盖",
+              "若触发读数在 last_accept 后才可见，不得作该项救济承诺"
+            ],
+            "occupancy_by_scenario": {
+              "feed:F5:bad": 1,
+              "zone:cold:bad": 1
+            },
+            "quantity": 1,
+            "reconciled_as_of": 25,
+            "spare_id": "Z01",
+            "status": "reserved",
+            "timing_note": "下一次读数 28 晚于最迟接收 26；必须在 26 前按已送达读数决定，不能承诺等新读数后的救济",
+            "trigger_state": "waiting_for_named_reading",
+            "truck_id": "G07",
+            "zone": "cold"
+          }
+        ],
+        "as_of": 25,
+        "capacity_check": {
+          "active_claim_count": 4,
+          "interpretation": "同一具名坏情景的占用相加；互斥情景分别记账，因此不会被错误地当作永久双倍占用",
+          "max_scenario_occupancy_by_spare": {
+            "Z01": 2,
+            "Z02": 1,
+            "Z03": 1
+          },
+          "scenario_ledger": {
+            "Z01:feed:F5:bad": 2,
+            "Z01:zone:cold:bad": 2,
+            "Z02:feed:F7:bad": 1,
+            "Z02:zone:new:bad": 1,
+            "Z03:feed:F5:bad": 1,
+            "Z03:zone:cold:bad": 1
+          },
+          "source_holds": {
+            "Z03": [
+              {
+                "occupancy_by_scenario": {
+                  "*": 1
+                },
+                "source": "spares.held_for",
+                "truck_id": "G05",
+                "unit_id": "Z03#1"
+              }
+            ]
+          }
+        },
+        "created_at": "2026-11-25T04:02:27.740562+00:00",
+        "exceptions": [],
+        "full_group": {
+          "conservative_lower": 0.760190899780862,
+          "frechet_bounds": [
+            0.8686099207039513,
+            0.8718028228153543
+          ],
+          "independence_product": 0.86901924174166,
+          "meets_required_conservatively": false
+        },
+        "key": "2026-11-25:G07",
+        "loaded_ids": [],
+        "marginals": [
+          {
+            "conservative_low": 0.774176,
+            "latest_visible": {
+              "as_of": 25,
+              "observed": 24,
+              "percent": 10.1,
+              "previous_percent": 12.8,
+              "received": 24
+            },
+            "lot": "L13",
+            "probability": 0.871803,
+            "state_at_as_of": "open"
+          },
+          {
+            "conservative_low": 0.986015,
+            "latest_visible": {
+              "as_of": 25,
+              "observed": 12,
+              "percent": 9.6,
+              "previous_percent": null,
+              "received": 14
+            },
+            "lot": "L14",
+            "probability": 0.996807,
+            "state_at_as_of": "open"
+          }
+        ],
+        "recommended_ship_lot_ids": [
+          "L14"
+        ],
+        "reconciliation": [],
+        "required_probability": 0.9,
+        "revision": 1,
+        "ship_date": "2026-11-25",
+        "status": "confirmed",
+        "submission_count": 1,
+        "truck_id": "G07",
+        "updated_at": "2026-11-25T04:02:27.740562+00:00",
+        "why_not_independence": "Fréchet 下界不需要独立、同相关或 copula 假设；乘积只在所有特有波动独立时成立"
+      },
+      "replaced_at": "2026-11-25T04:02:28.469671+00:00"
+    }
+  ],
+  "version": 1
+}

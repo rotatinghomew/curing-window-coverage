@@ -1,0 +1,349 @@
+{
+  "as_of": 29,
+  "capacity_warning": "F5 使 G05 与 G07 处于同一联合坏情景；二者各占不同备用位置，不能共享同一个位置。互斥触发的两份或有承诺可共用一个位置，但必须按具名情景校验。",
+  "claims": [
+    {
+      "assigned_unit_id": "Z02#1",
+      "carrier": "V2",
+      "claim_key": "G06:L12:Z02",
+      "coverage_window": [
+        42,
+        55
+      ],
+      "decision_deadline": 45,
+      "decision_type": "wait_for_named_reading_then_decide_by_deadline",
+      "exclusions": [
+        "不保证含水最终达标或客户一定按时收到",
+        "仅覆盖备用舱窗口 42–55；窗口外不覆盖",
+        "载具/温区不匹配、超过 last_accept、已装车后撤回均不覆盖",
+        "若触发读数在 last_accept 后才可见，不得作该项救济承诺"
+      ],
+      "lot_id": "L12",
+      "match": {
+        "decision_deadline": 45,
+        "eligible": true,
+        "future_condition_promisable": true,
+        "held_for": null,
+        "next_reading_at": 43,
+        "next_reading_visible_by_deadline": true,
+        "places": 1,
+        "reasons": [],
+        "spare_id": "Z02",
+        "window": [
+          42,
+          55
+        ]
+      },
+      "must_decide_by": 45,
+      "next_reading_at": 43,
+      "next_reading_visible_by_deadline": true,
+      "occupancy_by_scenario": {
+        "feed:F7:bad": 1,
+        "zone:new:bad": 1
+      },
+      "quantity": 1,
+      "spare_id": "Z02",
+      "status": "recommended",
+      "timing_note": "可等待 43 的读数，但必须在 45 前决定/接收",
+      "truck_id": "G06",
+      "zone": "new"
+    }
+  ],
+  "exceptions": [
+    {
+      "all_matches": [
+        {
+          "decision_deadline": 26,
+          "eligible": false,
+          "future_condition_promisable": false,
+          "held_for": null,
+          "next_reading_at": 28,
+          "next_reading_visible_by_deadline": false,
+          "places": 2,
+          "reasons": [
+            "last_accept_deadline_passed_without_prior_commitment"
+          ],
+          "spare_id": "Z01",
+          "window": [
+            24,
+            56
+          ]
+        },
+        {
+          "decision_deadline": 45,
+          "eligible": false,
+          "future_condition_promisable": true,
+          "held_for": null,
+          "next_reading_at": 43,
+          "next_reading_visible_by_deadline": true,
+          "places": 1,
+          "reasons": [
+            "carrier_not_allowed",
+            "zone_not_allowed"
+          ],
+          "spare_id": "Z02",
+          "window": [
+            42,
+            55
+          ]
+        },
+        {
+          "decision_deadline": 28,
+          "eligible": false,
+          "future_condition_promisable": true,
+          "held_for": "G05",
+          "next_reading_at": 27,
+          "next_reading_visible_by_deadline": true,
+          "places": 1,
+          "reasons": [
+            "last_accept_deadline_passed_without_prior_commitment"
+          ],
+          "spare_id": "Z03",
+          "window": [
+            24,
+            52
+          ]
+        }
+      ],
+      "kind": "no_eligible_spare_or_deadline_passed",
+      "lot_id": "L09",
+      "truck_id": "G05"
+    },
+    {
+      "all_matches": [
+        {
+          "decision_deadline": 26,
+          "eligible": false,
+          "future_condition_promisable": false,
+          "held_for": null,
+          "next_reading_at": 28,
+          "next_reading_visible_by_deadline": false,
+          "places": 2,
+          "reasons": [
+            "last_accept_deadline_passed_without_prior_commitment"
+          ],
+          "spare_id": "Z01",
+          "window": [
+            24,
+            56
+          ]
+        },
+        {
+          "decision_deadline": 45,
+          "eligible": false,
+          "future_condition_promisable": true,
+          "held_for": null,
+          "next_reading_at": 43,
+          "next_reading_visible_by_deadline": true,
+          "places": 1,
+          "reasons": [
+            "carrier_not_allowed",
+            "zone_not_allowed"
+          ],
+          "spare_id": "Z02",
+          "window": [
+            42,
+            55
+          ]
+        },
+        {
+          "decision_deadline": 28,
+          "eligible": false,
+          "future_condition_promisable": true,
+          "held_for": "G05",
+          "next_reading_at": 27,
+          "next_reading_visible_by_deadline": true,
+          "places": 1,
+          "reasons": [
+            "last_accept_deadline_passed_without_prior_commitment"
+          ],
+          "spare_id": "Z03",
+          "window": [
+            24,
+            52
+          ]
+        }
+      ],
+      "kind": "no_eligible_spare_or_deadline_passed",
+      "lot_id": "L10",
+      "truck_id": "G05"
+    },
+    {
+      "all_matches": [
+        {
+          "decision_deadline": 26,
+          "eligible": false,
+          "future_condition_promisable": false,
+          "held_for": null,
+          "next_reading_at": 28,
+          "next_reading_visible_by_deadline": false,
+          "places": 2,
+          "reasons": [
+            "last_accept_deadline_passed_without_prior_commitment"
+          ],
+          "spare_id": "Z01",
+          "window": [
+            24,
+            56
+          ]
+        },
+        {
+          "decision_deadline": 45,
+          "eligible": false,
+          "future_condition_promisable": true,
+          "held_for": null,
+          "next_reading_at": 43,
+          "next_reading_visible_by_deadline": true,
+          "places": 1,
+          "reasons": [
+            "zone_not_allowed"
+          ],
+          "spare_id": "Z02",
+          "window": [
+            42,
+            55
+          ]
+        },
+        {
+          "decision_deadline": 28,
+          "eligible": false,
+          "future_condition_promisable": true,
+          "held_for": "G05",
+          "next_reading_at": 27,
+          "next_reading_visible_by_deadline": true,
+          "places": 1,
+          "reasons": [
+            "carrier_not_allowed",
+            "spare_already_held_for_G05",
+            "last_accept_deadline_passed_without_prior_commitment"
+          ],
+          "spare_id": "Z03",
+          "window": [
+            24,
+            52
+          ]
+        }
+      ],
+      "kind": "no_eligible_spare_or_deadline_passed",
+      "lot_id": "L13",
+      "truck_id": "G07"
+    }
+  ],
+  "required_action": "use commitment ledger after scheduler confirmation; this file is the proposed plan",
+  "trucks": [
+    {
+      "decision": "exception_no_conservative_plan",
+      "full_joint": {
+        "available_count": 2,
+        "conservative_lower": 0.4204678101992161,
+        "frechet_bounds": [
+          0.7246800188231779,
+          0.7677475033801566
+        ],
+        "independence_product": 0.7346825496346728,
+        "lot_count": 2,
+        "marginal_probabilities": [
+          0.9569325154430214,
+          0.7677475033801566
+        ],
+        "marginal_uncertainty_joint_range": [
+          0.4204678101992161,
+          0.9092511654372624
+        ],
+        "meets_required_conservatively": false,
+        "no_dependence_assumption_note": "Fréchet 下界不需要独立、同相关或 copula 假设；乘积只在所有特有波动独立时成立",
+        "point_lower_meets_required": false,
+        "required": 0.92,
+        "scenarios": {
+          "frechet_lower": 0.7246800188231779,
+          "frechet_upper": 0.7677475033801566,
+          "gaussian_copula_rho_0.62": 0.7575384315453696,
+          "independence_product": 0.7346825496346728,
+          "perfect_common_cause_min_marginal": 0.7677475033801566
+        }
+      },
+      "loaded_ids": [],
+      "recommended_ship_lot_ids": [],
+      "required": 0.92,
+      "truck_id": "G05"
+    },
+    {
+      "decision": "confident_partial_split",
+      "full_joint": {
+        "available_count": 2,
+        "conservative_lower": 0.0,
+        "frechet_bounds": [
+          0.7956821190558996,
+          0.8066532851899212
+        ],
+        "independence_product": 0.7978033579855482,
+        "lot_count": 2,
+        "marginal_probabilities": [
+          0.9890288338659784,
+          0.8066532851899212
+        ],
+        "marginal_uncertainty_joint_range": [
+          0.0,
+          0.9822768227113925
+        ],
+        "meets_required_conservatively": false,
+        "no_dependence_assumption_note": "Fréchet 下界不需要独立、同相关或 copula 假设；乘积只在所有特有波动独立时成立",
+        "point_lower_meets_required": false,
+        "required": 0.86,
+        "scenarios": {
+          "frechet_lower": 0.7956821190558996,
+          "frechet_upper": 0.8066532851899212,
+          "gaussian_copula_rho_0.62": 0.8047752521036512,
+          "independence_product": 0.7978033579855482,
+          "perfect_common_cause_min_marginal": 0.8066532851899212
+        }
+      },
+      "loaded_ids": [
+        "L11"
+      ],
+      "recommended_ship_lot_ids": [
+        "L11"
+      ],
+      "required": 0.86,
+      "truck_id": "G06"
+    },
+    {
+      "decision": "confident_partial_split",
+      "full_joint": {
+        "available_count": 2,
+        "conservative_lower": 0.73255827782071,
+        "frechet_bounds": [
+          0.8578536953201112,
+          0.8718028228153543
+        ],
+        "independence_product": 0.8596419340891901,
+        "lot_count": 2,
+        "marginal_probabilities": [
+          0.8718028228153543,
+          0.986050872504757
+        ],
+        "marginal_uncertainty_joint_range": [
+          0.73255827782071,
+          0.9309866074614415
+        ],
+        "meets_required_conservatively": false,
+        "no_dependence_assumption_note": "Fréchet 下界不需要独立、同相关或 copula 假设；乘积只在所有特有波动独立时成立",
+        "point_lower_meets_required": false,
+        "required": 0.9,
+        "scenarios": {
+          "frechet_lower": 0.8578536953201112,
+          "frechet_upper": 0.8718028228153543,
+          "gaussian_copula_rho_0.62": 0.8677379685733907,
+          "independence_product": 0.8596419340891901,
+          "perfect_common_cause_min_marginal": 0.8718028228153543
+        }
+      },
+      "loaded_ids": [],
+      "recommended_ship_lot_ids": [
+        "L14"
+      ],
+      "required": 0.9,
+      "truck_id": "G07"
+    }
+  ]
+}
